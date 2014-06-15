@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery-BTC</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="../jquery.btc.js"></script>
+	</head>
+	<body>
+		<h1>jquery-btc demo</h1>
+		<div class="btc" data-btc="10.00">$10.00</div>
+		<div class="btc" data-btc="20.00">$20.00</div>
+		<div class="btc" data-btc="30.00">$30.00</div>
+		<script>
+			$(function() {
+				$(".btc").btc();
+			});
+		</script>
+	</body>
+</html>
