@@ -2,18 +2,11 @@
  *  jquery-btc - v0.0.1
  *	Bitcoin utilities.
  *
- *  Made by Alfred Gutierrez
+ *  Created by Alfred Gutierrez
  *  Under MIT License
  */
 
 ;(function ( $, window, document, undefined ) {
-
-		// Create the defaults
-		var pluginName = "btc",
-				defaults = {
-				propertyName: "value"
-		};
-
 		// Working bitcoin ticker APIs
 		var firebaseApi = "https://publicdata-cryptocurrency.firebaseio.com/bitcoin.json";
 		var bitpayApi = "https://bitpay.com/api/rates";
@@ -27,6 +20,15 @@
 		var btceApi = "https://btc-e.com/api/2/btc_usd/ticker";
 		var coinbaseApi = "https://coinbase.com/api/v1/prices/buy";
 		var bitfinexApi = "https://api.bitfinex.com/v1/ticker/btcusd";
+
+		// Create the defaults
+		var pluginName = "btc",
+				defaults = {
+					propertyName: "value",
+					btcSource: firebaseApi,
+					decimals: 4
+		};
+
 
 
 		// plugin constructor
@@ -59,20 +61,21 @@
 
 				getBTCData: function() {
 					// console.log($(this.element).text());
+					// $(this.element).text('loading...');
 
 					// Fetch BTC rate data from source
 					$.ajax({
 						context: this,
-						url: firebaseApi,
+						url: this.settings.btcSource,
 						type: "GET",
 						dataType: "json",
 						success: function(data) {
 								var usd = $(this.element).data('btc');
 								var rate = data.ask;
 								var conversion = usd / rate;
-								var result = conversion.toFixed(5);
+								var result = conversion.toFixed(this.settings.decimals);
 
-								$(this.element).append('<span> ' + result + ' BTC</span>');
+								$(this.element).append('<span style="border-bottom: 1px dotted #999"> ' + result + ' BTC</span>');
 
 						},
 						error: function(data) {
