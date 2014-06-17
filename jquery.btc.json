@@ -1,0 +1,36 @@
+{
+	"name": "jquery-btc",
+	"title": "jQuery-BTC",
+	"description": "Convert USD to BTC.",
+	"keywords": [
+		"jquery",
+		"bitcoin",
+		"btc"
+	],
+	"version": "0.0.1",
+	"author": {
+		"name": "Alfred Gutierrez",
+		"email": "alf.g.jr@gmail.com",
+		"url": "https://github.com/alfg"
+	},
+	"maintainers": [
+		{
+			"name": "Alfred Gutierrez",
+			"email": "alf.g.jr@gmail.com",
+			"url": "https://github.com/alfg"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://alfg.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/alfg/jquery-btc/issues",
+	"homepage": "http://github.com/alfg/jquery-btc",
+	"docs": "https://github.com/alfg/jquery-btc#readme",
+	"download": "https://github.com/alfg/jquery-btc/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}

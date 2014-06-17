@@ -1,0 +1,18 @@
+{
+	"name": "jquery-btc",
+	"version": "0.0.1",
+	"homepage": "http://github.com/alfg/jquery-btc",
+	"authors": [
+		"Alfred Gutierrez <alf.g.jr@gmail.com>"
+	],
+	"description": "jQuery Bitcoin utilities.",
+	"main": "src/jquery.btc.js",
+	"keywords": [
+		"jquery",
+		"jquery-plugin",
+		"jquery-btc",
+		"bitcoin",
+		"btc"
+	],
+	"license": "MIT"
+}

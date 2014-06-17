@@ -55,14 +55,7 @@
 						// call them like so: this.yourOtherFunction(this.element, this.settings).
 						this.getBTCData();
 				},
-				yourOtherFunction: function () {
-						// some logic
-				},
-
 				getBTCData: function() {
-					// console.log($(this.element).text());
-					// $(this.element).text('loading...');
-
 					// Fetch BTC rate data from source
 					$.ajax({
 						context: this,
@@ -70,16 +63,19 @@
 						type: "GET",
 						dataType: "json",
 						success: function(data) {
-								var usd = $(this.element).data('btc');
+								var usd = $(this.element).data("btc");
 								var rate = data.ask;
 								var conversion = usd / rate;
 								var result = conversion.toFixed(this.settings.decimals);
 
-								$(this.element).append('<span style="border-bottom: 1px dotted #999"> ' + result + ' BTC</span>');
+								$(this.element).append(
+									"&nbsp;&nbsp;<span style='border-bottom: 1px dotted #999' \
+									title='Updated: '" + data._updated + "'>" + result + " BTC \
+									</span>");
 
 						},
-						error: function(data) {
-							console.log("Unable to get BTC data from source.")
+						error: function() {
+							console.log("Unable to get BTC data from source.");
 						}
 					});
 				}
