@@ -70,7 +70,7 @@
 
 								$(this.element).append(
 									"&nbsp;&nbsp;<span style='border-bottom: 1px dotted #999' \
-									title='Updated: '" + data._updated + "'>" + result + " BTC \
+									title='Updated: " + data._updated + "'>" + result + " BTC \
 									</span>");
 
 						},
