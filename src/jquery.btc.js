@@ -63,7 +63,7 @@
 						type: "GET",
 						dataType: "json",
 						success: function(data) {
-								var usd = $(this.element).data("btc");
+								var usd = $(this.element).data("usd");
 								var rate = data.ask;
 								var conversion = usd / rate;
 								var result = conversion.toFixed(this.settings.decimals);

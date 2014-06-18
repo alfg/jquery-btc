@@ -71,14 +71,14 @@
 						type: "GET",
 						dataType: "json",
 						success: function(data) {
-								var usd = $(this.element).data("btc");
+								var usd = $(this.element).data("usd");
 								var rate = data.ask;
 								var conversion = usd / rate;
 								var result = conversion.toFixed(this.settings.decimals);
 
 								$(this.element).append(
 									"&nbsp;&nbsp;<span style='border-bottom: 1px dotted #999' \
-									title='Updated: '" + data._updated + "'>" + result + " BTC \
+									title='Updated: " + data._updated + "'>" + result + " BTC \
 									</span>");
 
 						},
