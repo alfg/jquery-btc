@@ -3,6 +3,8 @@ work-in-progress
 # jQuery-BTC
 jQuery Bitcoin utilities.
 
+JS Fiddle: http://jsfiddle.net/alfg/za2pyhm5/
+
 ## Usage
 
 1. Include jQuery:
